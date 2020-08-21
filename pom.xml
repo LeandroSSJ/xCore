@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>net.helydev.com</groupId>
-    <artifactId>Hub</artifactId>
+    <artifactId>xCore</artifactId>
     <version>1.0-SNAPSHOT</version>
     <build>
         <plugins>
@@ -28,8 +28,23 @@
             <scope>system</scope>
             <systemPath>${project.basedir}/libs/Spigot.jar</systemPath>
         </dependency>
+        <dependency>
+            <groupId>me.libraryaddict.disguise</groupId>
+            <artifactId>LibsDisguises</artifactId>
+            <version>10.0.15</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/LibsDisguise.jar</systemPath>
+        </dependency>
 
-    <dependency>
+        <dependency>
+            <groupId>com.comphenix.protocol</groupId>
+            <artifactId>ProtocolLib</artifactId>
+            <version>3.6.5-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/ProtocolLib.jar</systemPath>
+        </dependency>
+
+        <dependency>
         <groupId>org.projectlombok</groupId>
         <artifactId>lombok</artifactId>
         <version>1.16.8</version>

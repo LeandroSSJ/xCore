@@ -3,6 +3,7 @@ package net.helydev.com.utils;
 import org.bukkit.ChatColor;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Color {
 
@@ -10,11 +11,8 @@ public class Color {
         return ChatColor.translateAlternateColorCodes('&', message);
     }
 
-    public static List<String> translate(List<String> message) {
-        for (int i = 0; i < message.size(); ++i) {
-            message.set(i, translate(message.get(i)));
-        }
-        return message;
+    public static List<String> translate(List<String> s) {
+        return s.stream().map(Color::translate).collect(Collectors.toList());
     }
 }
 

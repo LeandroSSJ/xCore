@@ -6,9 +6,8 @@ import net.helydev.com.commands.broadcast.BroadcastCommand;
 import net.helydev.com.commands.broadcast.BroadcastRawCommand;
 import net.helydev.com.commands.chat.ChatClearCommand;
 import net.helydev.com.commands.ClearInventoryCommand;
-import net.helydev.com.commands.teleport.TeleportCommand;
-import net.helydev.com.commands.teleport.TeleportHereCommand;
-import net.helydev.com.commands.teleport.TpAllCommand;
+import net.helydev.com.commands.disguise.DisguiseCommand;
+import net.helydev.com.commands.teleport.*;
 import net.helydev.com.commands.time.DayCommand;
 import net.helydev.com.commands.time.NightCommand;
 import net.helydev.com.utils.commands.CommandFramework;
@@ -61,7 +60,11 @@ public class xCore extends JavaPlugin {
 
         commandFramework.registerCommands(new TeleportCommand());
         commandFramework.registerCommands(new TeleportHereCommand());
+        commandFramework.registerCommands(new TopCommand());
         commandFramework.registerCommands(new TpAllCommand());
+        commandFramework.registerCommands(new WorldCommand());
+
+        commandFramework.registerCommands(new DisguiseCommand());
 
         commandFramework.registerHelp();
     }

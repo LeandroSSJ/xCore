@@ -1,5 +1,6 @@
 package net.helydev.com.commands;
 
+import net.helydev.com.utils.Color;
 import net.helydev.com.utils.commands.Command;
 import net.helydev.com.utils.commands.CommandArgs;
 import org.bukkit.Bukkit;
@@ -61,6 +62,7 @@ public class GamemodeCommand {
         }
 
         target.setGameMode(mode);
+        target.sendMessage(Color.translate("&eYour game mode has been changed from &f" + mode.name()));
     }
 
     private GameMode getGameModeByName(String id) {
